@@ -4,69 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>StudyMate Hub</title>
+    <meta name="description"
+          content="StudyMate Hub - Free study notes, MCQs, coding practice, project ideas, Canva resources and career tools for students.">
+
+    <title>StudyMate Hub | Study Smarter</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
-    <div class="logo">📚 StudyMate Hub</div>
+
+    <div class="logo">
+        📚 StudyMate
+    </div>
 
     <nav>
         <a href="#home">Home</a>
-        <a href="#notes">Notes</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#questions">Questions</a>
         <a href="#quiz">MCQ</a>
         <a href="#resources">Resources</a>
     </nav>
 
     <button id="darkBtn">🌙</button>
+
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section id="home" class="hero">
 
-    <div class="hero-text">
+    <div class="hero-content">
 
-        <h1>Study Smarter, Not Harder 🚀</h1>
+        <span class="badge">
+            🎓 Student Learning Platform
+        </span>
+
+        <h1>
+            Study Smarter,
+            <span>Not Harder.</span>
+        </h1>
 
         <p>
-            Free study notes, MCQs, Canva resources,
-            resume templates and useful student tools.
+            Free notes, important questions, MCQs,
+            coding practice, project ideas and useful
+            student resources — all in one place.
         </p>
 
-        <a href="#notes" class="btn">Start Learning</a>
+        <div class="hero-buttons">
+
+            <a href="#subjects" class="primary-btn">
+                Start Learning →
+            </a>
+
+            <a href="#quiz" class="secondary-btn">
+                Take a Quiz
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- SEARCH -->
+<!-- ================= SEARCH ================= -->
 
 <section class="search-section">
 
-    <h2>🔎 Find Your Study Material</h2>
+    <span class="small-title">
+        STUDY RESOURCE FINDER
+    </span>
+
+    <h2>
+        🔎 Find What You Need
+    </h2>
+
+    <p>
+        Search subjects, questions, resources and more.
+    </p>
 
     <input
         type="text"
         id="searchBox"
-        placeholder="Search notes, MCQs, Canva..."
+        placeholder="Search e.g. OSI, DSA, AI, Java..."
     >
 
 </section>
 
 
-<!-- NOTES -->
+<!-- ================= SUBJECTS ================= -->
 
-<section id="notes" class="section">
+<section id="subjects" class="section">
 
-    <h2>📚 Study Notes</h2>
+    <span class="small-title">
+        LEARN
+    </span>
+
+    <h2>📚 Popular Subjects</h2>
+
+    <p class="section-description">
+        Simple explanations designed for students.
+    </p>
 
     <div class="cards">
+
+
+        <!-- COMPUTER NETWORKS -->
 
         <div class="card searchable">
 
@@ -75,34 +124,38 @@
             <h3>Computer Networks</h3>
 
             <p>
-                Learn OSI model, TCP/IP,
-                network topology and protocols.
+                OSI model, TCP/IP, network topology,
+                protocols and networking basics.
             </p>
 
-            <button onclick="showNote('cn')">
-                Read Notes
+            <button onclick="showSubject('cn')">
+                View Notes →
             </button>
 
         </div>
 
+
+        <!-- DSA -->
 
         <div class="card searchable">
 
             <div class="icon">💻</div>
 
-            <h3>Data Structures</h3>
+            <h3>Data Structures & Algorithms</h3>
 
             <p>
-                Learn arrays, linked lists,
-                stacks, queues and trees.
+                Arrays, linked lists, stacks, queues,
+                trees, graphs and algorithms.
             </p>
 
-            <button onclick="showNote('dsa')">
-                Read Notes
+            <button onclick="showSubject('dsa')">
+                View Notes →
             </button>
 
         </div>
 
+
+        <!-- AI -->
 
         <div class="card searchable">
 
@@ -111,12 +164,72 @@
             <h3>Artificial Intelligence</h3>
 
             <p>
-                Learn the basic concepts of
-                AI and Machine Learning.
+                AI, Machine Learning, neural networks
+                and modern AI concepts.
             </p>
 
-            <button onclick="showNote('ai')">
-                Read Notes
+            <button onclick="showSubject('ai')">
+                View Notes →
+            </button>
+
+        </div>
+
+
+        <!-- JAVA -->
+
+        <div class="card searchable">
+
+            <div class="icon">☕</div>
+
+            <h3>Java Programming</h3>
+
+            <p>
+                OOP concepts, classes, objects,
+                inheritance and exception handling.
+            </p>
+
+            <button onclick="showSubject('java')">
+                View Notes →
+            </button>
+
+        </div>
+
+
+        <!-- DATABASE -->
+
+        <div class="card searchable">
+
+            <div class="icon">🗄️</div>
+
+            <h3>Database Management</h3>
+
+            <p>
+                SQL, DBMS, keys, normalization,
+                relationships and queries.
+            </p>
+
+            <button onclick="showSubject('dbms')">
+                View Notes →
+            </button>
+
+        </div>
+
+
+        <!-- WEB DEVELOPMENT -->
+
+        <div class="card searchable">
+
+            <div class="icon">🌍</div>
+
+            <h3>Web Development</h3>
+
+            <p>
+                HTML, CSS, JavaScript and
+                beginner web development.
+            </p>
+
+            <button onclick="showSubject('web')">
+                View Notes →
             </button>
 
         </div>
@@ -126,39 +239,159 @@
 </section>
 
 
-<!-- NOTE POPUP -->
+<!-- ================= IMPORTANT QUESTIONS ================= -->
 
-<div id="noteModal" class="modal">
+<section id="questions" class="section questions-section">
 
-    <div class="modal-content">
+    <span class="small-title">
+        EXAM PREPARATION
+    </span>
 
-        <span class="close" onclick="closeNote()">×</span>
+    <h2>📝 Important Questions</h2>
 
-        <h2 id="noteTitle"></h2>
+    <p class="section-description">
+        Practice these questions before your examination.
+    </p>
 
-        <p id="noteText"></p>
+
+    <div class="question-grid">
+
+
+        <div class="question-card searchable">
+
+            <span>Computer Networks</span>
+
+            <h3>
+                What is the OSI model?
+            </h3>
+
+            <p>
+                Explain the seven layers of the OSI model
+                with their functions.
+            </p>
+
+        </div>
+
+
+        <div class="question-card searchable">
+
+            <span>DSA</span>
+
+            <h3>
+                What is a Binary Search Tree?
+            </h3>
+
+            <p>
+                Explain BST and its basic operations.
+            </p>
+
+        </div>
+
+
+        <div class="question-card searchable">
+
+            <span>AI</span>
+
+            <h3>
+                What is Artificial Intelligence?
+            </h3>
+
+            <p>
+                Define AI and explain its applications.
+            </p>
+
+        </div>
+
+
+        <div class="question-card searchable">
+
+            <span>Java</span>
+
+            <h3>
+                What is inheritance?
+            </h3>
+
+            <p>
+                Explain inheritance with a simple example.
+            </p>
+
+        </div>
+
+
+        <div class="question-card searchable">
+
+            <span>DBMS</span>
+
+            <h3>
+                What is normalization?
+            </h3>
+
+            <p>
+                Explain database normalization and its need.
+            </p>
+
+        </div>
+
+
+        <div class="question-card searchable">
+
+            <span>Web</span>
+
+            <h3>
+                What is JavaScript?
+            </h3>
+
+            <p>
+                Explain the role of JavaScript in websites.
+            </p>
+
+        </div>
 
     </div>
 
-</div>
+</section>
 
 
-<!-- MCQ -->
+<!-- ================= MCQ ================= -->
 
 <section id="quiz" class="section quiz-section">
 
-    <h2>📝 Quick MCQ Quiz</h2>
+    <span class="small-title">
+        PRACTICE
+    </span>
+
+    <h2>🧠 Test Your Knowledge</h2>
+
+    <p class="section-description">
+        Answer the questions and check your score.
+    </p>
 
     <div class="quiz-box">
 
-        <h3 id="question"></h3>
+        <div class="quiz-top">
+
+            <span id="questionNumber">
+                Question 1
+            </span>
+
+            <span id="score">
+                Score: 0
+            </span>
+
+        </div>
+
+        <h3 id="question">
+            Loading question...
+        </h3>
 
         <div id="answers"></div>
 
         <p id="result"></p>
 
-        <button onclick="nextQuestion()" class="next-btn">
-            Next Question
+        <button
+            onclick="nextQuestion()"
+            class="next-btn">
+            Next Question →
         </button>
 
     </div>
@@ -166,27 +399,37 @@
 </section>
 
 
-<!-- RESOURCES -->
+<!-- ================= RESOURCES ================= -->
 
 <section id="resources" class="section">
 
-    <h2>🎨 Student Resources</h2>
+    <span class="small-title">
+        STUDENT TOOLS
+    </span>
+
+    <h2>🛠️ Useful Resources</h2>
+
+    <p class="section-description">
+        Tools and resources to help you study and build your career.
+    </p>
+
 
     <div class="cards">
+
 
         <div class="card searchable">
 
             <div class="icon">🎨</div>
 
-            <h3>Canva Templates</h3>
+            <h3>Canva Resources</h3>
 
             <p>
-                Create presentations,
-                posters and social-media designs.
+                Presentation ideas, poster ideas,
+                social-media designs and templates.
             </p>
 
-            <button onclick="resourceMessage('Canva Templates')">
-                Explore
+            <button onclick="resourceMessage('Canva Resources')">
+                Explore →
             </button>
 
         </div>
@@ -196,15 +439,15 @@
 
             <div class="icon">📄</div>
 
-            <h3>Resume Templates</h3>
+            <h3>Resume Builder</h3>
 
             <p>
-                Create a clean and professional
-                student resume.
+                Learn how to create a simple,
+                professional student resume.
             </p>
 
-            <button onclick="resourceMessage('Resume Templates')">
-                Explore
+            <button onclick="resourceMessage('Resume Builder')">
+                Explore →
             </button>
 
         </div>
@@ -217,12 +460,30 @@
             <h3>Project Ideas</h3>
 
             <p>
-                Find beginner-friendly
-                coding and AI project ideas.
+                Beginner-friendly AI, web development
+                and coding project ideas.
             </p>
 
             <button onclick="resourceMessage('Project Ideas')">
-                Explore
+                Explore →
+            </button>
+
+        </div>
+
+
+        <div class="card searchable">
+
+            <div class="icon">💼</div>
+
+            <h3>Career Preparation</h3>
+
+            <p>
+                Interview questions, coding practice
+                and beginner career guidance.
+            </p>
+
+            <button onclick="resourceMessage('Career Preparation')">
+                Explore →
             </button>
 
         </div>
@@ -232,32 +493,103 @@
 </section>
 
 
-<!-- FUTURE MONEY SECTION -->
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+    <div>
+        <strong>📚</strong>
+        <span>Study Resources</span>
+    </div>
+
+    <div>
+        <strong>🧠</strong>
+        <span>Practice MCQs</span>
+    </div>
+
+    <div>
+        <strong>💻</strong>
+        <span>Coding Practice</span>
+    </div>
+
+    <div>
+        <strong>🚀</strong>
+        <span>Career Growth</span>
+    </div>
+
+</section>
+
+
+<!-- ================= FUTURE MONETIZATION ================= -->
 
 <section class="money">
 
-    <h2>💰 Support StudyMate Hub</h2>
+    <span class="small-title">
+        FUTURE PLAN
+    </span>
+
+    <h2>💰 Grow With StudyMate</h2>
 
     <p>
-        This section can later be used for legitimate
-        monetization such as advertisements,
-        affiliate recommendations or your own digital products.
+        As the website grows, it can support legitimate
+        monetization through advertisements, affiliate
+        recommendations and original digital products.
     </p>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-    <h3>📚 StudyMate Hub</h3>
+    <div class="footer-logo">
+        📚 StudyMate Hub
+    </div>
 
-    <p>Learn • Practice • Grow</p>
+    <p>
+        Learn • Practice • Build • Grow
+    </p>
 
-    <p>© 2026 StudyMate Hub</p>
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#questions">Questions</a>
+        <a href="#resources">Resources</a>
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 StudyMate Hub. Built for students.
+    </p>
 
 </footer>
+
+
+<!-- ================= NOTE MODAL ================= -->
+
+<div id="noteModal" class="modal">
+
+    <div class="modal-content">
+
+        <button
+            class="close"
+            onclick="closeSubject()">
+            ×
+        </button>
+
+        <span class="small-title">
+            STUDY NOTES
+        </span>
+
+        <h2 id="noteTitle"></h2>
+
+        <div id="noteText"></div>
+
+    </div>
+
+</div>
 
 
 <script src="script.js"></script>
